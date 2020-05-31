@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CitySearchComponent } from './city-search.component';
 import { ClimateService } from '../climate.service';
 import { ClimateFakeService } from '../climate.fake.sevice';
-import { FormControl } from '@angular/forms';
+
 
 describe('CitySearchComponent', () => {
   let component: CitySearchComponent;

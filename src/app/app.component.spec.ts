@@ -1,6 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { ClimateService } from './climate.service';
+import { ClimateFakeService } from './climate.fake.sevice';
 
 
 describe('AppComponent', () => {
@@ -9,6 +11,10 @@ describe('AppComponent', () => {
       imports: [
         RouterTestingModule,
    
+      ],
+      providers: [
+        {provide: ClimateService, useClass:
+        ClimateFakeService}
       ],
       declarations: [
         AppComponent

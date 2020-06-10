@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/local-weather-app-practice",
+            "outputPath": "dist/local-weather-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "local-weather-app-practice:build"
+            "browserTarget": "local-weather-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "local-weather-app-practice:build:production"
+              "browserTarget": "local-weather-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "local-weather-app-practice:build"
+            "browserTarget": "local-weather-app:build"
           }
         },
         "test": {
@@ -112,18 +112,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "local-weather-app-practice:serve"
+            "devServerTarget": "local-weather-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "local-weather-app-practice:serve:production"
+              "devServerTarget": "local-weather-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "local-weather-app-practice",
+  "defaultProject": "local-weather-app",
   "cli": {
     "analytics": "9bf9f073-e53f-44d3-b543-b7a909ae9072"
   }

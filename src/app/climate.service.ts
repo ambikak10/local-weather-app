@@ -33,7 +33,7 @@ getWeather(search: string|number, country: string) {
   if(country){
     uriParams = `${uriParams},${country}`
   }
- return this.http.get<IweatherData>(`${environment.baseUrl}api.openweathermap.org/data/2.5/weather?${uriParams},${country}&appid=${environment.appID}`).pipe(map(data => this.transformData(data)))
+ return this.http.get<IweatherData>(`${environment.baseUrl}api.openweathermap.org/data/2.5/weather?${uriParams}&appid=${environment.appID}`).pipe(map(data => this.transformData(data)))
 }
 
 transformData(data: IweatherData): Weather{
